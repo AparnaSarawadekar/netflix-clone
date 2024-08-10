@@ -5,8 +5,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/HighnessAtharva/netflix-clone-t3.git
-cd netflix-clone-t3
+git clone https://github.com/AparnaSarawadekar/netflix-clone.git
+cd netflix-clone
 ```
 
 Install dependencies:
