@@ -67,6 +67,22 @@ const Auth = () => {
     }
   }, [email, name, password, login]);
 
+  const handleGoogleSignIn = useCallback(() => {
+    const callbackUrl = process.env.NODE_ENV === 'development' 
+      ? 'http://localhost:3000/profiles' 
+      : 'https://aparna-project1.vercel.app/profiles';
+
+    signIn('google', { callbackUrl });
+  }, []);
+
+  const handleGithubSignIn = useCallback(() => {
+    const callbackUrl = process.env.NODE_ENV === 'development' 
+      ? 'http://localhost:3000/profiles' 
+      : 'https://aparna-project1.vercel.app/profiles';
+
+    signIn('github', { callbackUrl });
+  }, []);
+
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className="bg-black w-full h-full lg:bg-opacity-50">
@@ -107,10 +123,10 @@ const Auth = () => {
               {variant === 'login' ? 'Login' : 'Sign up'}
             </button>
             <div className="flex flex-row items-center gap-4 mt-8 justify-center">
-              <div onClick={() => signIn('google', { callbackUrl: '/profiles' })} className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
+              <div onClick={handleGoogleSignIn} className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
                 <FcGoogle size={32} />
               </div>
-              <div onClick={() => signIn('github', { callbackUrl: '/profiles' })} className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
+              <div onClick={handleGithubSignIn} className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
                 <FaGithub size={32} />
               </div>
             </div>
