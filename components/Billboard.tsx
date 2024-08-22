@@ -30,8 +30,8 @@ const Billboard: React.FC = () => {
           <button
             onClick={handleOpenModal}
             className="
-            bg-white
-            text-white
+              bg-white
+              text-white
               bg-opacity-30 
               rounded-md 
               py-1 md:py-2 
