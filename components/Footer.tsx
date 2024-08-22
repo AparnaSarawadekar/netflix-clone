@@ -4,10 +4,7 @@ const Footer: React.FC = () => {
   return (
     <footer style={footerStyle}>
       <p style={textStyle}>
-        Streamflix is a Netflix clone project created for educational purposes only. It is not affiliated with Netflix.
-      </p>
-      <p style={textStyle}>
-        &copy; {new Date().getFullYear()} Aparna Sarawadekar. All rights reserved.
+        Streamflix is a Netflix clone project created for educational purposes only. It is not affiliated with Netflix.&copy; {new Date().getFullYear()} Aparna Sarawadekar. All rights reserved.
       </p>
     </footer>
   );
@@ -16,7 +13,7 @@ const Footer: React.FC = () => {
 const footerStyle: React.CSSProperties = {
   backgroundColor: '#333',
   color: '#fff',
-  padding: '20px',
+  padding: '10px',
   textAlign: 'center',
   position: 'fixed',
   bottom: 0,
@@ -24,8 +21,8 @@ const footerStyle: React.CSSProperties = {
 };
 
 const textStyle: React.CSSProperties = {
-  margin: '5px 0',
-  fontSize: '14px',
+  margin: '3px 0',
+  fontSize: '10px',
 };
 
 export default Footer;
